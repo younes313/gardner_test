@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="static/style.css">
+        <title>Quiz</title>
+    </head>
+
+    <body>
+        <div class="progress_bar">
+            
+            <p>درصد:</p> 
+            <div class="progress" style="height:5rem;margin:0 10rem;">
+              <div id="progress_id" class="progress-bar progress-bar-striped active" role="progressbar"  aria-valuemin="0" aria-valuemax="100" style="width:0%;height:5rem;">
+                <!-- <p>style="width:0%;height:5rem;font-size: 3rem;padding: 1.5rem;color: #0dff92;"</p> -->
+              </div>
+            </div>
+        </div>
+          
+          <!-- <script>
+              var a = getElementById(a);
+              a.style.width = 70+"%" ;
+              a.innerHtml = 70+"%";
+          
+          </script> -->
+          
+
+
+        <div class="container">
+            <div class="Notification"></div>
+            <h2 class="heading">به کتاب و کتابخوانی علاقه دارم.</h2>
+            <ul class="list">
+                <li>
+                    <input type="radio" id="f-option" name="selector">
+                    <label for="f-option">به هیچ وجه شبیه من نیست</label>
+
+                    <div class="check"></div>
+                </li>
+                <li>
+                    <input type="radio" id="s-option" name="selector">
+                    <label for="s-option">اندکی شبیه من است</label>
+
+                    <div class="check">
+                        <div class="inside"></div>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id="t-option" name="selector">
+                    <label for="t-option">در حد متوسط شبیه من است</label>
+
+                    <div class="check">
+                        <div class="inside"></div>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id="r-option" name="selector">
+                    <label for="r-option">تا حد زیادی شبیه من است</label>
+
+                    <div class="check">
+                        <div class="inside"></div>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" id="e-option" name="selector">
+                    <label for="e-option">کاملا شبیه من است</label>
+
+                    <div class="check">
+                        <div class="inside"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="myContainer">
+            <button class="nextQ">سوال بعد</button>
+        </div>
+
+        <div class="finish">
+            <button class="finish_btn">اتمام</button>
+        </div>
+
+
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="static/app.js"></script>
+
+    </body>
+
+
+
+</html>
