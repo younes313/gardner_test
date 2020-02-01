@@ -180,7 +180,6 @@ finish_btn.addEventListener("click", () => {
   location.href = "/calculate_result/" + answers;
 
 
-
   // console.log(answers)
   //   $.ajax({
   //     type: "POST",

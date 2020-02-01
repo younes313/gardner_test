@@ -1,5 +1,7 @@
-from flask import Flask,render_template 
+from flask import Flask,render_template , jsonify
 from flask import request
+import json
+import requests
 
 app = Flask(__name__)
 
@@ -11,9 +13,7 @@ def questions():
 
 @app.route('/calculate_result/<string:answers>' , methods=['POST' , 'GET'])
 def calculate(answers):
-    # if request.method == 'POST':
-    #     scores = request.get_json()
-    #     answers = str(scores['answers'])
+  
     Linguistic = 0
     Logical_mathematical = Spatial = Bodily_Kinesthetic = Musical = Interpersonal = Intrapersonal = Naturalist = 0
     
@@ -46,18 +46,32 @@ def calculate(answers):
             "Naturalist":Naturalist,
         }
 
-    print(dic)
+    
 	
+    
+
+    result = {
+        'answers':answers,
+        'results':dic        
+    }
+
+    # request Odoo here
+    url = 'http://127.0.0.1:5000/get-result-and-return-that' 
+    r = requests.post(url, json = result)
+    print( r.json() )
+
     return render_template('result.html' , dic=dic)
 
 
+# just for test the request correctness
+@app.route('/get-result-and-return-that' , methods=['POST'])
+def get_and_return():
+    return request.get_json()
     
 
-    # return json.jsonify({
-    #     'scores': scores
-    # })
 
 
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
+
