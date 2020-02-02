@@ -198,8 +198,8 @@ let clickOnNext = () => {
 
 
 finish_btn.addEventListener("click", () => {
-
-  location.href = "/calculate_result/" + answers;
+  
+  location.href = "/calculate_result/" + answers  ;
 
 
   // console.log(answers)
