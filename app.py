@@ -73,9 +73,9 @@ def calculate(answers):
 
  # query parameter version
 
-    url = 'http://127.0.0.1:5000/gardner/'+ str(dic['Linguistic']) + ',' +str(dic['Logical_mathematical']) + ',' +str(dic['Spatial']) + ',' +str(dic['Bodily_Kinesthetic']) + ',' +str(dic['Intrapersonal']) + ',' +str(dic['Interpersonal']) + ',' +str(dic['Musical']) + ',' +str(dic['Naturalist'] ) + ',' + str(glob_id)
+    url = 'http://127.0.0.1:8069/gardner/'+ str(dic['Linguistic']) + ',' +str(dic['Logical_mathematical']) + ',' +str(dic['Spatial']) + ',' +str(dic['Bodily_Kinesthetic']) + ',' +str(dic['Intrapersonal']) + ',' +str(dic['Interpersonal']) + ',' +str(dic['Musical']) + ',' +str(dic['Naturalist'] ) + ',' + str(glob_id)
 
-    r = requests.post(url)
+    r = requests.get(url)
 
     return render_template('result.html' , dic=dic)
 

@@ -6,54 +6,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
      
-	<!-- <link rel="stylesheet" href="static/res.css"> -->
+	<link rel="stylesheet" href="../static/res.css">
 
 	<title>result</title>
 
-	<style>
-
-	body,
-	html {
-	margin: 0 ;
-	padding: 3rem ;
-	height: 100%;
-	background: #222222;
-	font-family: "Lato", sans-serif;
-	}
-
-
-	table {
-		width:100%;
-		text-align: center;
-		height: 80%;
-		/* margin: 4rem; */
-  	}
-	table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-	}
-	h2{
-	direction: rtl;
-	color: #0dff92;
-	}
-th, td {
-padding: 15px;
-text-align: center;
-font-weight: bolder;
-font-size: 2rem;
-}
-table#t01 tr:nth-child(even) {
-background-color: #eee;
-}
-table#t01 tr:nth-child(odd) {
-background-color: #fff;
-}
-table#t01 th {
-background-color: black;
-color: white;
-}
-	
-	</style>
 
 </head>
 <body>
@@ -124,7 +80,19 @@ color: white;
 	 
 	  
 	</table>
+
+	<div class="finish">
+		<button class="finish_btn">بازگشت به صفحه اصلی</button>
+	</div>
 	
+
+	<script>
+		let finish_btn = document.querySelector(".finish_btn");
+		finish_btn.addEventListener("click", () => {
+  			location.href = "http://127.0.0.1:8069"  ;
+		})
+	
+	</script>
 
 	
 </body>
