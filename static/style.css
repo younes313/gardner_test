@@ -10,6 +10,18 @@ html {
 }
 
 
+.heading {
+  background: #0dff92;
+  display: block;
+  color: #000000;
+  text-align: right;
+  direction: rtl;
+  margin-right: 1rem;
+  padding: 20px; 
+  border-top-right-radius: 55px;
+  border-bottom-left-radius: 55px;
+}
+
 
 .progress_bar p{
   color: #0dff92;
@@ -33,13 +45,13 @@ html {
   /* padding: 10rem; */
 }
 
-h2 {
+/* h2 {
   display: block;
   color: #aaaaaa;
   text-align: right;
   direction: rtl;
   margin-right: 1rem;
-}
+} */
 
 .container ul {
   list-style: none;
