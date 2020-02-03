@@ -7,20 +7,14 @@ app = Flask(__name__)
 
 
 
-
-glob_id =0
-
-
-@app.route('/<int:id>')
+@app.route('/<string:id>')
 def questions(id):
-    global glob_id 
-    glob_id = id
-    return render_template('index.html')
+    return render_template('index.html' , dic={'id':id} )
 
 
 
-@app.route('/calculate_result/<string:answers>' , methods=['POST' , 'GET'])
-def calculate(answers):
+@app.route('/calculate_result/<string:answers>/<string:id>' , methods=['POST' , 'GET'])
+def calculate(answers,id):
   
     Linguistic = 0
     Logical_mathematical = Spatial = Bodily_Kinesthetic = Musical = Interpersonal = Intrapersonal = Naturalist = 0
@@ -73,8 +67,8 @@ def calculate(answers):
 
  # query parameter version
 
-    url = 'http://127.0.0.1:8069/gardner/'+ str(dic['Linguistic']) + ',' +str(dic['Logical_mathematical']) + ',' +str(dic['Spatial']) + ',' +str(dic['Bodily_Kinesthetic']) + ',' +str(dic['Intrapersonal']) + ',' +str(dic['Interpersonal']) + ',' +str(dic['Musical']) + ',' +str(dic['Naturalist'] ) + ',' + str(glob_id)
-
+    url = 'http://127.0.0.1:8069/gardner/'+ str(dic['Linguistic']) + ',' +str(dic['Logical_mathematical']) + ',' +str(dic['Spatial']) + ',' +str(dic['Bodily_Kinesthetic']) + ',' +str(dic['Intrapersonal']) + ',' +str(dic['Interpersonal']) + ',' +str(dic['Musical']) + ',' +str(dic['Naturalist'] ) + ',' + str(id)
+    print("url = "+url)
     r = requests.get(url)
 
     return render_template('result.html' , dic=dic)
