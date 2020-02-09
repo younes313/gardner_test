@@ -6,23 +6,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!--        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="static/style.css">
+<!--        <link rel="stylesheet" href="../static/myStyle.css">-->
+        <link rel="stylesheet" href="../static/myStyle.css">
         <title>Quiz</title>
     </head>
 
     <body>
-        <div class="progress_bar">
-            
-            <p>درصد:</p> 
-            <div class="progress" style="height:5rem;margin:0 10rem;">
-              <div id="progress_id" class="progress-bar progress-bar-striped active" role="progressbar"  aria-valuemin="0" aria-valuemax="100" style="width:0%;height:5rem;">
-                <!-- <p>style="width:0%;height:5rem;font-size: 3rem;padding: 1.5rem;color: #0dff92;"</p> -->
-              </div>
-            </div>
-        </div>
-          
+<!--        <div class="progress_bar">-->
+<!--            <p>درصد:</p>-->
+<!--            <div class="progress" style="height:1rem;margin:0 10rem;">-->
+<!--              <div id="progress_id" class="progress-bar progress-bar-striped active" role="progressbar"  aria-valuemin="0" aria-valuemax="100" style="width:0%;height:5rem;">-->
+<!--                &lt;!&ndash; <p>style="width:0%;height:5rem;font-size: 3rem;padding: 1.5rem;color: #0dff92;"</p> &ndash;&gt;-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
           <!-- <script>
               var a = getElementById(a);
               a.style.width = 70+"%" ;
@@ -32,68 +33,137 @@
           
 
 
-        <div class="container" id="quiz">
-            <div class="Notification"></div>
-            <h2 class="heading" >به کتاب و کتابخوانی علاقه دارم.</h2>
-            <ul class="list">
-                <li>
-                    <input type="radio" id="f-option" name="selector">
-                    <label for="f-option">به هیچ وجه شبیه من نیست</label>
+<!--        <div class="container" id="quiz">-->
+<!--            <div class="Notification"></div>-->
+<!--            <h2 class="heading" >به کتاب و کتابخوانی علاقه دارم.</h2>-->
+<!--            <ul class="list">-->
+<!--                <li>-->
+<!--                    <input type="radio" id="f-option" name="selector">-->
+<!--                    <label for="f-option">به هیچ وجه شبیه من نیست</label>-->
 
-                    <div class="check"></div>
-                </li>
-                <li>
-                    <input type="radio" id="s-option" name="selector">
-                    <label for="s-option">اندکی شبیه من است</label>
+<!--                    <div class="check"></div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <input type="radio" id="s-option" name="selector">-->
+<!--                    <label for="s-option">اندکی شبیه من است</label>-->
 
-                    <div class="check">
-                        <div class="inside"></div>
-                    </div>
-                </li>
-                <li>
-                    <input type="radio" id="t-option" name="selector">
-                    <label for="t-option">در حد متوسط شبیه من است</label>
+<!--                    <div class="check">-->
+<!--                        <div class="inside"></div>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <input type="radio" id="t-option" name="selector">-->
+<!--                    <label for="t-option">در حد متوسط شبیه من است</label>-->
 
-                    <div class="check">
-                        <div class="inside"></div>
-                    </div>
-                </li>
-                <li>
-                    <input type="radio" id="r-option" name="selector">
-                    <label for="r-option">تا حد زیادی شبیه من است</label>
+<!--                    <div class="check">-->
+<!--                        <div class="inside"></div>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <input type="radio" id="r-option" name="selector">-->
+<!--                    <label for="r-option">تا حد زیادی شبیه من است</label>-->
 
-                    <div class="check">
-                        <div class="inside"></div>
-                    </div>
-                </li>
-                <li>
-                    <input type="radio" id="e-option" name="selector">
-                    <label for="e-option">کاملا شبیه من است</label>
+<!--                    <div class="check">-->
+<!--                        <div class="inside"></div>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--                <li>-->
+<!--                    <input type="radio" id="e-option" name="selector">-->
+<!--                    <label for="e-option">کاملا شبیه من است</label>-->
 
-                    <div class="check">
-                        <div class="inside"></div>
-                    </div>
-                </li>
-            </ul>
+<!--                    <div class="check">-->
+<!--                        <div class="inside"></div>-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="myContainer">-->
+<!--            <button class="nextQ">سوال بعد</button>-->
+<!--        </div>-->
+
+<!--        <div class="finish">-->
+<!--            <button class="finish_btn">مشاهده نتایج</button>-->
+<!--        </div>-->
+
+<div class="container">
+    <main dir="rtl" style="text-align: right;">
+        <div class="slide-indicator">
+            <div id="ind-cont">
+                <div class="circle" id="c1"></div>
+                <div class="circle" id="c2"></div>
+                <div class="circle" id="c3"></div>
+                <div class="circle" id="c4"></div>
+                <div class="circle" id="c5"></div>
+                <div class="circle" id="c6"></div>
+                <div class="circle" id="c7"></div>
+                <div class="circle" id="c8"></div>
+            </div>
         </div>
-        <div class="myContainer">
-            <button class="nextQ">سوال بعد</button>
+        <form>
+        <div id="quiz">
+            <div class="row ">
+                <div class="col-sm-6 "  id="q1">
+                    <div class="q-text"></div>
+                    <div class="q-options" dir="ltr"></div>
+                </div>
+                <div class="col-sm-6 " id="q2">
+                    <div class="q-text"></div>
+                    <div class="q-options" dir="ltr"></div>
+                </div>
+                <div class="col-sm-6" id="q3">
+                    <div class="q-text"></div>
+                    <div class="q-options" dir="ltr"></div>
+                </div>
+                <div class="col-sm-6" id="q4">
+                    <div class="q-text"></div>
+                    <div class="q-options" dir="ltr"></div>
+                </div>
+                <div class="col-sm-6" id="q5">
+                    <div class="q-text"></div>
+                    <div class="q-options" dir="ltr"></div>
+                </div>
+                <div class="col-sm-6" id="q6">
+                    <div class="q-text"></div>
+                    <div class="q-options" dir="ltr"></div>
+                </div>
+                <div class="col-sm-6" id="q7">
+                    <div class="q-text"></div>
+                    <div class="q-options" dir="ltr"></div>
+                </div>
+                <div class="col-sm-6" id="q8">
+                    <div class="q-text"></div>
+                    <div class="q-options" dir="ltr"></div>
+                </div>
+                <div class="col-sm-6" id="q9">
+                    <div class="q-text"></div>
+                    <div class="q-options" dir="ltr"></div>
+                </div>
+                <div class="col-sm-6" id="q10">
+                    <div class="q-text"></div>
+                    <div class="q-options" dir="ltr"></div>
+                </div>
+            </div>
         </div>
-
-        <div class="finish">
-            <button class="finish_btn">مشاهده نتایج</button>
+        <div style="text-align: center;">
+            <button type="submit" id="nextQ-btn">
+                صفحه بعد
+            </button>
         </div>
-        
+        </form>
+        <div style="text-align: center;">
+            <button type="button" id="finish-btn">
+                مشاهده نتایج
+            </button>
+        </div>
+    </main>
+</div>
 
+
+    <script>
+        var user_id = {{ dic.id }}
+    </script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
-            var user_id = {{ dic.id }}
-        </script>
-
-        <script src="static/app.js"></script>
+        <script src="../static/app.js"></script>
 
     </body>
-
-
-
 </html>

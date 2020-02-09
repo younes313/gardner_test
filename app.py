@@ -18,7 +18,6 @@ def calculate(answers,id):
   
     Linguistic = 0
     Logical_mathematical = Spatial = Bodily_Kinesthetic = Musical = Interpersonal = Intrapersonal = Naturalist = 0
-    
     for i ,res in enumerate(answers):
         if i%8 == 0:
             Linguistic += int(res)
@@ -70,7 +69,6 @@ def calculate(answers,id):
     url = 'http://127.0.0.1:8069/gardner/'+ str(dic['Linguistic']) + ',' +str(dic['Logical_mathematical']) + ',' +str(dic['Spatial']) + ',' +str(dic['Bodily_Kinesthetic']) + ',' +str(dic['Intrapersonal']) + ',' +str(dic['Interpersonal']) + ',' +str(dic['Musical']) + ',' +str(dic['Naturalist'] ) + ',' + str(id)
     print("url = "+url)
     r = requests.get(url)
-
     return render_template('result.html' , dic=dic)
 
 
@@ -93,4 +91,3 @@ def get_and_return(any):
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
-

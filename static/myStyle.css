@@ -1,0 +1,296 @@
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 900;
+    src: url('../static/fonts/eot/IRANSansWeb_Black.eot');
+    src: url('../static/fonts/eot/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../static/fonts/woff2/IRANSansWeb_Black.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../fonts/woff/IRANSansWeb_Black.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/ttf/IRANSansWeb_Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: bold;
+    src: url('../static/fonts/eot/IRANSansWeb_Bold.eot');
+    src: url('../static/fonts/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../static/fonts/woff2/IRANSansWeb_Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../fonts/woff/IRANSansWeb_Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url('../static/fonts/eot/IRANSansWeb_Medium.eot');
+    src: url('../static/fonts/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../static/fonts/woff2/IRANSansWeb_Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../fonts/woff/IRANSansWeb_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url('../static/fonts/eot/IRANSansWeb_Light.eot');
+    src: url('../static/fonts/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../static/fonts/woff2/IRANSansWeb_Light.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../fonts/woff/IRANSansWeb_Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/ttf/IRANSansWeb_Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 200;
+    src: url('../static/fonts/eot/IRANSansWeb_UltraLight.eot');
+    src: url('../static/fonts/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../static/fonts/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../fonts/woff/IRANSansWeb_UltraLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('../static/fonts/eot/IRANSansWeb.eot');
+    src: url('../static/fonts/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('../static/fonts/woff2/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('../fonts/woff/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('../fonts/ttf/IRANSansWeb.ttf') format('truetype');
+}
+
+.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #0000002e;
+    display: inline-block;
+    margin: 1px;
+}
+#ind-cont{
+    text-align: center;
+    margin: 50px 0 50px 0;
+}
+body,
+html {
+  margin: 0 ;
+  padding: 0 ;
+  box-sizing: border-box ;
+  /*background: #222222;*/
+  font-family: "IRANSans";
+}
+
+
+.q-text {
+    background: #09ffa461;
+    font-size: 1.65rem;
+    color: #000;
+    padding: 11px;
+    border-radius: 20px 20px 0 0;
+}
+
+.q-options{
+    margin-bottom: 20px;
+    border: 1px solid #09ffa461;
+    border-radius: 0 0 20px 20px;
+    padding-right: 20px;
+}
+.q-options label{
+    line-height: 1.9rem;
+    font-weight: 500;
+}
+#nextQ-btn{
+    position: relative;
+    background-color: #0ba92f;
+    color: #fff;
+    border: none;
+    width: 15rem;
+    height: 4rem;
+    border-radius: 20px;
+    font-size: 1.75rem;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    outline: none;
+    transition: all 1s;
+}
+#nextQ-btn:hover{
+    background-color: green;
+}
+#finish-btn{
+    display: none;
+    position: relative;
+    background-color: #0ba92f;
+    color: #fff;
+    border: none;
+    width: 15vw;
+    height: 4rem;
+    border-radius: 20px;
+    font-size: 1.2vw;
+    width: 50%;
+    margin-top: 5rem;
+}
+
+
+/*.container {*/
+/*  display: block;*/
+/*  position: relative;*/
+/*  margin: auto;*/
+/*  !* margin-top: 3rem; *!*/
+/*  height: auto;*/
+/*  font-size: 2rem;*/
+/*  !* width: 500px; *!*/
+/*  !* padding: 10rem; *!*/
+/*}*/
+
+/* h2 {
+  display: block;
+  color: #aaaaaa;
+  text-align: right;
+  direction: rtl;
+  margin-right: 1rem;
+} */
+
+/*.container ul {*/
+/*  list-style: none;*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*  overflow: auto;*/
+/*}*/
+
+/*ul li {*/
+/*  color: #aaaaaa;*/
+/*  display: block;*/
+/*  position: relative;*/
+/*  float: left;*/
+/*  width: 100%;*/
+/*  !* height: 20vh; *!*/
+/*  border-bottom: 4px solid #333;*/
+/*}*/
+
+/*ul li input[type="radio"] {*/
+/*  position: absolute;*/
+/*  visibility: hidden;*/
+/*}*/
+
+/*ul li label {*/
+/*  display: block;*/
+/*  position: relative;*/
+/*  font-weight: 300;*/
+/*  font-size: 1.35em;*/
+/*  padding: 25px 100px 25px 80px;*/
+/*  margin: 10px auto;*/
+/*  height: 30px;*/
+/*  z-index: 9;*/
+/*  cursor: pointer;*/
+/*  -webkit-transition: all 0.25s linear;*/
+/*  text-align: right;*/
+/*}*/
+
+/*ul li:hover label {*/
+/*  color: #ffffff;*/
+/*}*/
+
+/*ul li .check {*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  border: 5px solid #aaaaaa;*/
+/*  border-radius: 100%;*/
+/*  height: 25px;*/
+/*  width: 25px;*/
+/*  top: 30px;*/
+/*  right: 20px;*/
+/*  z-index: 5;*/
+/*  transition: border 0.25s linear;*/
+/*  -webkit-transition: border 0.25s linear;*/
+/*}*/
+
+/*ul li:hover .check {*/
+/*  border: 5px solid #ffffff;*/
+/*}*/
+
+/*ul li .check::before {*/
+/*  display: block;*/
+/*  position: absolute;*/
+/*  content: "";*/
+/*  border-radius: 100%;*/
+/*  height: 15px;*/
+/*  width: 15px;*/
+/*  top: 0px;*/
+/*  left: 0px;*/
+/*  margin : auto;*/
+/*  transition: background 0.25s linear;*/
+/*  -webkit-transition: background 0.25s linear;*/
+/*}*/
+
+/*input[type="radio"]:checked ~ .check {*/
+/*  border: 5px solid #0dff92;*/
+/*}*/
+
+/*input[type="radio"]:checked ~ .check::before {*/
+/*  background: #0dff92;*/
+/*}*/
+
+/*input[type="radio"]:checked ~ label {*/
+/*  color: #0dff92;*/
+/*}*/
+/*!*----------------------My Styles----------------------*!*/
+/*.myContainer {*/
+/*  width: 50%;*/
+/*  margin: 0 auto;*/
+/*  margin-top: 8rem;*/
+
+/*  display: flex;*/
+/*  justify-content: space-around;*/
+/*}*/
+
+/*.myContainer button {*/
+/*  padding: 0.5rem 1.5rem;*/
+/*  background-color: #0dff92;*/
+/*  border: 2px solid #0dff92;*/
+/*  font-size: 1.2rem;*/
+/*  border-radius: 10pc;*/
+/*  transition: all 0.3s ease-in-out;*/
+/*  cursor: pointer;*/
+/*  width: 65%;*/
+/*  font-size: 2rem;*/
+/*  font-weight: bold;*/
+/*}*/
+/*.myContainer button:hover {*/
+/*  background-color: transparent;*/
+/*  color: white;*/
+/*}*/
+
+/*.myContainer button:focus {*/
+/*  outline: none;*/
+/*}*/
+
+
+
+
+/*.finish {*/
+/*  width: 50%;*/
+/*  margin: 0 auto;*/
+/*  margin-top: 1rem;*/
+/*  display: flex;*/
+/*  justify-content: space-around;*/
+/*}*/
+/*.finish button {*/
+/*  display: none;*/
+/*  padding: 0.5rem 1.5rem;*/
+/*  background-color: #0dff92;*/
+/*  border: 2px solid #0dff92;*/
+/*  font-size: 1.2rem;*/
+/*  border-radius: 10pc;*/
+/*  transition: all 0.3s ease-in-out;*/
+/*  cursor: pointer;*/
+/*  width: 65%;*/
+/*  font-size: 2rem;*/
+/*  font-weight: bold;*/
+/*}*/
+/*.finish button:hover {*/
+/*  background-color: transparent;*/
+/*  color: white;*/
+/*}*/
+
+/*.finish button:focus {*/
+/*  outline: none;*/
+/*}*/
+
+
+
+
+/*.Notification {*/
+/*  display: none;*/
+/*  color: #7b2931;*/
+/*  background: #f8d7da;*/
+/*  text-align: center;*/
+/*  padding: 1rem;*/
+/*  border-radius: 10px;*/
+/*}*/
