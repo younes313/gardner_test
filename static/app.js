@@ -346,17 +346,17 @@ function clickOnNextPage () {
     event.preventDefault();
     let q_options = document.getElementsByClassName("q-options");
     // let checkNotNull = document.getElementsByName(radio_options[i]);
-    let t = false;
+    let t = 10;
     for (let i = 0; i < 10; i++) {
-      t = false;
+      // t = false;
       for (let j = 0; j < 5; j++) {
         if (q_options[i].childNodes[j].childNodes[1].checked) {
-          t = true;
+          t -= 1;
           break;
         }
       }
     }
-    if (t) {
+    if (t==0) {
       if(document.getElementById("nextQ-btn").innerHTML == "مشاهده نتایج")
       {
         let answers_string = "";
@@ -377,6 +377,7 @@ function clickOnNextPage () {
         document.getElementById(circle_number[current_circle]).style.backgroundColor = "black";
         document.getElementById(circle_number[current_circle - 1]).style.backgroundColor = "#0000002e";
         current_circle++;
+        window.scrollTo(0, 0); 
       }
     } else
       window.alert("لطفا به همه موارد پاسخ دهید.");
