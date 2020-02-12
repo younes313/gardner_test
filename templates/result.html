@@ -13,80 +13,126 @@
 
 </head>
 <body>
+	<div id="content">
 
-	<h2>نتیجه آزمون</h2>
+		<h2>نتیجه آزمون</h2>
+
+		<table id="t01">
+			<tr>
+				<th>نوع هوش</th>
+				<th>نمره از ۵۰</th> 
+			
+			</tr>
+
+			<tr>
+				<th>هوش کلامی/زبانی </th>
+				<th>{{ dic.Linguistic }}</th>
+				
+			</tr>
 
 
-	<table id="t01">
-	  <tr>
-		<th>نوع هوش</th>
-		<th>نمره از ۵۰</th> 
-	   
-	  </tr>
+			<tr>
+				<td>هوش منطقی ریاضی </td>
+				<td>{{ dic.Logical_mathematical }}</td>
+				
+			</tr>
 
-	  <tr>
-		<td>هوش کلامی/زبانی </td>
-		<td>{{ dic.Linguistic }}</td>
+			<tr>
+				<td>هوش فضایی </td>
+				<td>{{ dic.Spatial }}</td>
+				
+			</tr>
+
+			<tr>
+				<td>هوش بدنی- جنبشی </td>
+				<td>{{ dic.Bodily_Kinesthetic }}</td>
+				
+			</tr>
+
+			<tr>
+				<td>هوش برون فردی </td>
+				<td>{{ dic.Intrapersonal }}</td>
+				
+			</tr>
+
+			
+			<tr>
+				<td>هوش درون فردی </td>
+				<td>{{ dic.Interpersonal }}</td>
+				
+			</tr>
+
+			
+			<tr>
+				<td>هوش موسیقیایی </td>
+				<td>{{ dic.Musical }}</td>
+				
+			</tr>
+
+			<tr>
+				<td>هوش طبیعت گرا </td>
+				<td>{{ dic.Naturalist }}</td>
+				
+			</tr>
 		
-	  </tr>
+		</table>
 
-
-	  <tr>
-		<td>هوش منطقی ریاضی </td>
-		<td>{{ dic.Logical_mathematical }}</td>
 		
-	  </tr>
+	</div>
 
-	  <tr>
-		<td>هوش فضایی </td>
-		<td>{{ dic.Spatial }}</td>
-		
-	  </tr>
-
-	  <tr>
-		<td>هوش بدنی- جنبشی </td>
-		<td>{{ dic.Bodily_Kinesthetic }}</td>
-		
-	  </tr>
-
-	  <tr>
-		<td>هوش برون فردی </td>
-		<td>{{ dic.Intrapersonal }}</td>
-		
-	  </tr>
-
-	  
-	  <tr>
-		<td>هوش درون فردی </td>
-		<td>{{ dic.Interpersonal }}</td>
-		
-	  </tr>
-
-	  
-	  <tr>
-		<td>هوش موسیقیایی </td>
-		<td>{{ dic.Musical }}</td>
-		
-	  </tr>
-
-	  <tr>
-		<td>هوش طبیعت گرا </td>
-		<td>{{ dic.Naturalist }}</td>
-		
-	  </tr>
-	  
-
-	 
-	 
-	  
-	</table>
+	<div id="editor"></div>
 
 	<div class="finish">
 		<button class="finish_btn">بازگشت به صفحه اصلی</button>
 	</div>
+
+	<div class="finish" >
+		<button class="finish_btn" id="cmd">دریافت pdf</button>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script> -->
 	
+	<!-- <script src="es6-promise.auto.min.js"></script>
+	<script src="jspdf.min.js"></script>
+	<script src="html2canvas.min.js"></script>
+	<script src="html2pdf.min.js"></script> -->
+	<script src="../../static/node_modules/es6-promise/dist/es6-promise.min.js"></script>
+	<script src= "../../static/node_modules/jspdf/dist/jspdf.min.js"></script>
+	<script src= "../../static/node_modules/html2canvas/dist/html2canvas.min.js"></script>
+	<script src="../../static/node_modules/html2pdf.js/dist/html2pdf.min.js"></script>
 
 	<script>
+
+
+		// var doc = new jsPDF();
+		// var specialElementHandlers = {
+		// 	'#editor': function (element, renderer) {
+		// 		return true;
+		// 	}
+		// };
+
+		$('#cmd').click(function () {
+
+			var element = document.getElementById('content');
+			// html2pdf(element);
+			// var worker = html2pdf().from(element).toImg().save();
+			// worker.toImg();
+			var opt = {
+			margin:       1,
+			pagebreak:	  {mode: ['avoid-all']},
+			filename:     'myfile.pdf',
+			image:        { type: 'jpeg', quality: 0.08 },
+			html2canvas:  { scale: 2 },
+			jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+			};
+
+			html2pdf().set(opt).from(element).save();
+
+		});
+
+
+
 		let finish_btn = document.querySelector(".finish_btn");
 		finish_btn.addEventListener("click", () => {
   			location.href = "http://127.0.0.1:8069"  ;

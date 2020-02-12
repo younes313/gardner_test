@@ -2,9 +2,14 @@ from flask import Flask,render_template , jsonify
 from flask import request
 import json
 import requests
+# import pdfkit
+from flask_wkhtmltopdf import Wkhtmltopdf 
+
+
+
 
 app = Flask(__name__)
-
+wkhtmltopdf = Wkhtmltopdf(app)
 
 
 @app.route('/<string:id>')
@@ -67,8 +72,15 @@ def calculate(answers,id):
  # query parameter version
 
     url = 'http://127.0.0.1:8069/gardner/'+ str(dic['Linguistic']) + ',' +str(dic['Logical_mathematical']) + ',' +str(dic['Spatial']) + ',' +str(dic['Bodily_Kinesthetic']) + ',' +str(dic['Intrapersonal']) + ',' +str(dic['Interpersonal']) + ',' +str(dic['Musical']) + ',' +str(dic['Naturalist'] ) + ',' + str(id)
-    print("url = "+url)
-    r = requests.get(url)
+    # print("url = "+url)
+    # r = requests.get(url)
+
+    # print(request.url)
+    # pdfkit.from_url('http://127.0.0.1:5000/calculate_result/12341234123412341234123412341234123412341234123412341234123412341234123412341234/120','out.pdf')
+    # pdfkit.from_file('result.html', 'out.pdf')
+
+    # wkhtmltopdf.render_template_to_pdf('result.html', download=True, save=False, dic=dic)
+
     return render_template('result.html' , dic=dic)
 
 
@@ -83,8 +95,11 @@ def get_and_return(any):
     # return request.get_json()
 
 
+@app.route('/url' , methods=['GET','POST'])
+def url():
+    return request.url
 
-   
+ 
 
 
 
