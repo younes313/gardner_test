@@ -1,26 +1,23 @@
-from flask import Flask,render_template , jsonify
+from flask import Flask,render_template , jsonify, redirect
 from flask import request
 import json
 import requests
 # import pdfkit
-from flask_wkhtmltopdf import Wkhtmltopdf 
-
-
+# from flask_wkhtmltopdf import Wkhtmltopdf 
 
 
 app = Flask(__name__)
-wkhtmltopdf = Wkhtmltopdf(app)
+# wkhtmltopdf = Wkhtmltopdf(app)
 
 
 @app.route('/<string:id>')
 def questions(id):
-    return render_template('index.html' , dic={'id':id} )
+    return render_template('index.html', dic={'id':id})
 
 
 
 @app.route('/calculate_result/<string:answers>/<string:id>' , methods=['POST' , 'GET'])
 def calculate(answers,id):
-  
     Linguistic = 0
     Logical_mathematical = Spatial = Bodily_Kinesthetic = Musical = Interpersonal = Intrapersonal = Naturalist = 0
     for i ,res in enumerate(answers):
@@ -81,9 +78,41 @@ def calculate(answers,id):
 
     # wkhtmltopdf.render_template_to_pdf('result.html', download=True, save=False, dic=dic)
 
-    return render_template('result.html' , dic=dic)
+    # return render_template('result.html' , dic=dic)
+
+    return redirect ("http://127.0.0.1:8069")
+    
 
 
+# exam id and type
+@app.route('/exam/<int:id>/<string:type>' , methods=['GET','POST'])
+def exam(id,type):
+    dic={
+        'id':id,
+        'type':type
+    }
+
+    #  should be a odoo request here to get exam results!
+
+    return render_template('pre_result.html',dic=dic)
+
+
+# final result
+@app.route('/exam/result/<string:res>', methods=['GET','POST'])
+def result(res):
+    ans = res.split(',')
+    dic = { 
+            "Linguistic":           ans[0],
+            "Logical_mathematical": ans[1],
+            "Spatial":              ans[2],
+            "Bodily_Kinesthetic":   ans[3],
+            "Intrapersonal":        ans[4],
+            "Interpersonal":        ans[5],
+            "Musical":              ans[6],
+            "Naturalist":           ans[7],
+        }
+    
+    return render_template('result.html', dic=dic)
 
 
 # just for test the request correctness
@@ -95,14 +124,6 @@ def get_and_return(any):
     # return request.get_json()
 
 
-@app.route('/url' , methods=['GET','POST'])
-def url():
-    return request.url
-
- 
-
-
-
-
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
+    

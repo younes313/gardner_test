@@ -363,9 +363,9 @@ function clickOnNextPage () {
         for(let i=0;i<80;i++)
         {
           answers_string += answers[i] ;
-        }
-        console.log(answers_string);
+        }        
         location.href = "/calculate_result/" + answers_string + "/" + user_id ;
+        // location.href = "http://127.0.0.1:8069" ;
       }
       else
       {
