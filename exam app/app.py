@@ -2,12 +2,9 @@ from flask import Flask,render_template , jsonify, redirect
 from flask import request
 import json
 import requests
-# import pdfkit
-# from flask_wkhtmltopdf import Wkhtmltopdf 
 
 
 app = Flask(__name__)
-# wkhtmltopdf = Wkhtmltopdf(app)
 
 
 @app.route('/<string:id>')
@@ -84,46 +81,7 @@ def calculate(answers,id):
     
 
 
-# exam id and type
-@app.route('/exam/<int:id>/<string:type>' , methods=['GET','POST'])
-def exam(id,type):
-    dic={
-        'id':id,
-        'type':type
-    }
-
-    #  should be a odoo request here to get exam results!
-
-    return render_template('pre_result.html',dic=dic)
-
-
-# final result
-@app.route('/exam/result/<string:res>', methods=['GET','POST'])
-def result(res):
-    ans = res.split(',')
-    dic = { 
-            "Linguistic":           ans[0],
-            "Logical_mathematical": ans[1],
-            "Spatial":              ans[2],
-            "Bodily_Kinesthetic":   ans[3],
-            "Intrapersonal":        ans[4],
-            "Interpersonal":        ans[5],
-            "Musical":              ans[6],
-            "Naturalist":           ans[7],
-        }
-    
-    return render_template('result.html', dic=dic)
-
-
-# just for test the request correctness
-@app.route('/gardner/<any>' , methods=['GET','POST'])
-def get_and_return(any):
-    print(any)
-    return any
-
-    # return request.get_json()
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
-    
+    app.run(debug=True, host='0.0.0.0', port=5000, threaded=True)

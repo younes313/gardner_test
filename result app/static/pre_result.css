@@ -1,0 +1,82 @@
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src:url('fonts/ttf/IRANSansWeb.ttf') format('truetype');
+}
+body{
+    background-image: url("flower-3214833_1280.jpg");
+}
+#main{
+    position: relative;
+    margin: auto;
+    width: fit-content;
+    border: 1px solid lightgray;
+    border-radius: 8%;
+    font-family: IRANSans, sans-serif;
+    padding: 10px;
+    background-color: white;
+}
+#user-icon{
+    border-bottom: 1px solid lightgray;
+    padding: 35px;
+}
+#user-icon-img{
+    height: 90px;
+    margin: auto;
+    display: block;
+    border: 1px solid lightblue;
+    border-radius: 50%;
+}
+#student-id{
+    text-align: center;
+    margin: 25px 10px;
+}
+#std-id-input{
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    border: 1px solid #c8c8c8;
+    color: #717171;
+    padding: 11px;
+}
+#std-id-input:focus{
+    box-shadow: 0 0 5px blue;
+    border-radius: 10px;
+}
+#type-of-report{
+    text-align: center;
+    margin: 25px 10px;
+}
+.report-btn{
+    margin: 10px 30px;
+    display: inline-block;
+    position: relative;
+    width: 130px;
+    background-color: #c1faff;
+    outline: none;
+    border: 1px solid #c1faff;
+    border-radius: 25px;
+    color: #0000005e;
+}
+.report-btn:focus{
+    outline: none;
+}
+#view-report{
+    text-align: center;
+}
+#view-report-btn{
+    margin: 10px 30px;
+    width: 130px;
+    height: 40px;
+    background-color: #d81abceb;
+    outline: none;
+    border: 1px solid #d81abceb;
+    border-radius: 25px;
+    color: #f8f9fa;
+}
+#view-report-btn:hover{
+    background-color: #d81abc;
+}
+#view-report-btn:focus{
+    outline: none;
+}

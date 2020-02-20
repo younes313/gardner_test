@@ -191,21 +191,7 @@ yield "80- در تعطیلات خود ترجیح می دهم به مکان ها�
 }
 let headings = getHeadings();
 
-// let showAlert = () => {
-//   alertMessage.style.display = "block";
-//   alertMessage.innerHTML = `<p>هیچ گزینه ای انتخاب نکرده اید</p>`;
-//   setTimeout(() => {
-//     alertMessage.style.display = "none";
-//   }, 2000);
-// };
 
-// let clicked = 0;
-// Array.from(listItem).forEach(item => {
-//   item.addEventListener("click", () => {
-//     clicked++;
-//     console.log(clicked);
-//   });
-// });
 
 function convert(str){
   if (str === "به هیچ وجه شبیه من نیست"){
@@ -225,64 +211,6 @@ function convert(str){
   }
 }
 
-// let clickOnNext = () => {
-//   nextQ_btn.addEventListener("click", () => {
-//     if (clicked >= 1) {
-//       $("#quiz").slideToggle("slow" , function(){
-//         // width += 100/80;
-//         // progress.style.width = width+"%";
-//         // progress.innerHTML = width + "%";
-//         // clicked = 0;
-//         let headerValue = headings.next().value;
-//
-//         if (headerValue === undefined) {
-//           Array.from(inputs).forEach(input => {
-//             if (input.checked) {
-//               // answers.push(input.nextSibling.nextSibling.innerHTML);
-//               answers += convert(input.nextSibling.nextSibling.innerHTML);
-//             }
-//           });
-//           heading.textContent = "سوالات به اتمام رسید";
-//           list.style.display = "none";
-//           buttons.style.display = "none";
-//           finish_btn.style.display = "block";
-//         } else {
-//           Array.from(inputs).forEach(input => {
-//             if (input.checked) {
-//               // answers.push(input.nextSibling.nextSibling.innerHTML);
-//               answers += convert(input.nextSibling.nextSibling.innerHTML);
-//             }
-//             input.checked = false;
-//           });
-//           heading.textContent = headerValue;
-//           show_q_text();
-//         }
-//       });
-//       $("#quiz").slideToggle("slow");
-//     } else if (clicked === 0) {
-//       // showAlert();
-//     }
-//   });
-// };
-
-// finish_btn.addEventListener("click", () => {
-//
-//   location.href = "/calculate_result/" + answers + "/" + user_id ;
-//
-//
-//   // console.log(answers)
-//   //   $.ajax({
-//   //     type: "POST",
-//   //     contentType: "application/json;charset=utf-8",
-//   //     url: "/calculate_result/" ,
-//   //     traditional: "true",
-//   //     data: JSON.stringify({answers}),
-//   //     dataType: "json"
-//   // });
-//
-//
-// });
-// clickOnNext();
 
 /*-------------------------------------------My Code--------------------------------------*/
 document.getElementById("c1").style.backgroundColor = "black";
@@ -296,14 +224,7 @@ function show_q_text () {
     }
     q_text[i].innerText = current_q_text;
     
-    // if(current_q_text === undefined){
-    //   document.getElementById("quiz").style.display = "none";
-    //   document.getElementById("nextQ-btn").style.display = "none";
-    //   document.getElementById("ind-cont").style.display = "none";
-    //   document.getElementById("finish-btn").style.display = "block";
-    // }else{
-    //   q_text[i].innerText = current_q_text;
-    // }
+  
   }
 }
 show_q_text();
@@ -345,10 +266,10 @@ function clickOnNextPage () {
   document.getElementById("nextQ-btn").addEventListener("click", (event) => {
     event.preventDefault();
     let q_options = document.getElementsByClassName("q-options");
-    // let checkNotNull = document.getElementsByName(radio_options[i]);
+    
     let t = 10;
     for (let i = 0; i < 10; i++) {
-      // t = false;
+      
       for (let j = 0; j < 5; j++) {
         if (q_options[i].childNodes[j].childNodes[1].checked) {
           t -= 1;
@@ -365,7 +286,6 @@ function clickOnNextPage () {
           answers_string += answers[i] ;
         }        
         location.href = "/calculate_result/" + answers_string + "/" + user_id ;
-        // location.href = "http://127.0.0.1:8069" ;
       }
       else
       {
@@ -389,7 +309,7 @@ function add_new_events() {
   let q_options = document.getElementsByClassName("q-options");
   let o_index;
   let q_index;
-  // console.log(q_options[0].childNodes[0].childNodes[0]);
+  
   for(let i = 0 ; i < 10 ; i++){
     for(let j = 0 ; j < 5 ; j++){
       let q_option_number = q_options[i].childNodes[j];
@@ -398,8 +318,6 @@ function add_new_events() {
         console.log(o_index);
         q_index = question_id.indexOf(q_options[i].previousElementSibling.innerHTML);
         answers[q_index] = o_index;
-        console.log(q_index+1);
-        console.log(answers);
       });
     }
   }
@@ -409,7 +327,7 @@ add_new_events();
 function show_result() {
   let result = document.getElementById("finish-btn");
   result.addEventListener("click", () => {
-    // console.log(answers);
+    
   })
 }
 show_result();
