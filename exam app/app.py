@@ -66,8 +66,7 @@ def calculate(answers,id):
  # query parameter version
 
     url = 'http://127.0.0.1:8069/gardner/'+ str(dic['Linguistic']) + ',' +str(dic['Logical_mathematical']) + ',' +str(dic['Spatial']) + ',' +str(dic['Bodily_Kinesthetic']) + ',' +str(dic['Intrapersonal']) + ',' +str(dic['Interpersonal']) + ',' +str(dic['Musical']) + ',' +str(dic['Naturalist'] ) + ',' + str(id)
-    # print("url = "+url)
-    # r = requests.get(url)
+    r = requests.get(url)
 
     # print(request.url)
     # pdfkit.from_url('http://127.0.0.1:5000/calculate_result/12341234123412341234123412341234123412341234123412341234123412341234123412341234/120','out.pdf')
