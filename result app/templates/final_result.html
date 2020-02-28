@@ -7,7 +7,7 @@
     <title>final result</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/final_result.css">
+    <link rel="stylesheet" href="../../../../static/final_result.css">
 </head>
 
 <body>
@@ -18,19 +18,19 @@
             <div id="std-name" class="std-info-row">
                 <span class="info-text-props">نام دانش آموز:</span>
                 <!--------------------------- This span tag is filled with student name --------------------------->
-                <span>امیر دودو باقالی</span>
+                <span>{{dic.name}}</span>
                 <!-------------------------------------------------------------------------------------------------->
             </div>
             <div id="std-age" class="std-info-row">
                 <span class="info-text-props">سن دانش آموز:</span>
                 <!--------------------------- This span tag is filled with student age --------------------------->
-                <span>2 ساله از اصفهان</span>
+                <span>{{ dic.age }}</span>
                 <!-------------------------------------------------------------------------------------------------->
             </div>
             <div id="exam-id" class="std-info-row">
                 <span class="info-text-props">شناسه آزمون:</span>
                 <!--------------------------- This span tag is filled with exam id --------------------------->
-                <span>999999</span>
+                <span>{{dic.exam_id}}</span>
                 <!-------------------------------------------------------------------------------------------------->
             </div>
         </div>
@@ -56,14 +56,14 @@
                 <tr>
                     <th>نمره از 50</th>
                     <!-------------------------- here is filled by grades ------------------------>
-                    <td class="res-td">45</td><!--کلامی/زبانی-->
-                    <td class="res-td">43</td><!--منطقی ریاضی-->
-                    <td class="res-td">46</td><!--فضایی-->
-                    <td class="res-td">50</td><!--بدنی/جنبشی-->
-                    <td class="res-td">49</td><!--درون فردی-->
-                    <td class="res-td">40</td><!--برون فردی-->
-                    <td class="res-td">39</td><!--موسیقایی-->
-                    <td class="res-td">48</td><!--طبیعت گرا-->
+                    <td class="res-td">{{dic.Linguistic}}</td><!--کلامی/زبانی-->
+                    <td class="res-td">{{dic.Logical_mathematical}}</td><!--منطقی ریاضی-->
+                    <td class="res-td">{{dic.Spatial}}</td><!--فضایی-->
+                    <td class="res-td">{{dic.Bodily_Kinesthetic}}</td><!--بدنی/جنبشی-->
+                    <td class="res-td">{{dic.Intrapersonal}}</td><!--درون فردی-->
+                    <td class="res-td">{{dic.Interpersonal}}</td><!--برون فردی-->
+                    <td class="res-td">{{dic.Musical}}</td><!--موسیقایی-->
+                    <td class="res-td">{{dic.Naturalist}}</td><!--طبیعت گرا-->
                     <!----------------------------------------------------------------------------->
                 </tr>
                 </tbody>
@@ -80,17 +80,13 @@
             <h3>نظر مشاور</h3>
             <!--------------------here is filled with consultant opinion --------------------------->
             <p>
-                خب به نظر من شما با این نمراتت هیچ پخی نمیشی.
-                درس خوندنو بوکون تو اونجات و ترک تحصیل کن و برو دنبال پول درآوردن.
-                اینو برادرانه میگم اگه از الان بری تو بازار به نفعته بد بخت.
-                الان یکیو میشناسم همسن منه تو کار دلاره و یه موتور سی تومنی داره!!!
-                آره دیگه خلاصه بکش بیرون فرو کن یه جا دیگه.
+               {{dic.comment}}
             </p>
             <!-------------------------------------------------------------------------------------->
         </div>
     </div>
     <button type="button" onclick="printPage()" id="print-btn">چاپ کارنامه</button>
-    <button type="button" id="home-btn">بازگشت به صفحه اصلی</button>
+    <button type="button" onclick="location.href = '/exam' " id="home-btn">بازگشت به صفحه اصلی</button>
 </div>
 
 
@@ -113,7 +109,16 @@
                 //---------------------data set of grades------------------------------
                 //first index: هوش طبیعت گرا
                 //last index: هوش کلامی/زبانی
-                data: [48, 39, 40, 49, 50, 46, 43, 45],
+                data: [
+                    {{dic.Naturalist}},
+                    {{dic.Musical}},
+                    {{dic.Interpersonal}},
+                    {{dic.Intrapersonal}},
+                    {{dic.Bodily_Kinesthetic}},
+                    {{dic.Spatial}},
+                    {{dic.Logical_mathematical}},
+                    {{dic.Linguistic}}           
+                ],
                 //---------------------------------------------------------------------
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',

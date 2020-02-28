@@ -18,7 +18,6 @@ def home():
 # exam id and type
 @app.route('/exam' , methods=['GET','POST'])
 def exam():
-
     return render_template('pre_result.html')
 
 
@@ -26,16 +25,22 @@ def exam():
 # final result
 @app.route('/exam/result/<string:type>/<int:id>', methods=['GET','POST'])
 def result(type, id):
-
 	details = {
 		'id':id,
 		'type':type        
 	}
 
-	url = 'http://127.0.0.1:3000/test'
-	r = requests.post(url, json = details)
-	print( r.json()['id'] )
-	res = '10,20,30,40,50,30,10,40'
+	url = 'http://127.0.0.1:3000/test/' + type + '/' + str(id)  # this should change to odoo url!
+
+	print(url)
+	r = requests.post(url, json=details)
+	# print( r.json()['id'] )
+	res = r.json()['result']  # '10,20,30,40,50,30,10,40'
+	comment = r.json()['comment']
+	name = r.json()['name']
+	age = r.json()['age']
+	exam_id = id
+
 
 	ans = res.split(',')
 	dic = { 
@@ -47,18 +52,32 @@ def result(type, id):
 			"Interpersonal":        ans[5],
 			"Musical":              ans[6],
 			"Naturalist":           ans[7],
+			"comment":comment,
+			"name":name,
+			"age":age,
+			"exam_id":exam_id,
 		}
 
-	return render_template('result.html', dic=dic)
+	return render_template('final_result.html', dic=dic)
+
+
+
 
 
 # just for test the request correctness
-@app.route('/test' , methods=['GET','POST'])
-def get_and_return():
+@app.route('/test/<string:type>/<int:id>' , methods=['GET','POST'])
+def get_and_return(type, id):
     # print(any)
     # return any
+	dic = {
+		'result' : "10,20,30,40,50,30,10,40",
+		'comment' : 'بدک نیست',
+		'name':'امیر جهانبین',
+		'age':'22',
+		'exam_id':id,		
+	}
 
-    return request.get_json()
+	return jsonify(dic)
 
 
 if __name__ == '__main__':
