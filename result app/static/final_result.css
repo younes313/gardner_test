@@ -34,6 +34,7 @@ body{
     margin: auto;
 }
 table{
+    width: 95%;
     margin: auto;
     text-align: center;
 }
@@ -44,10 +45,10 @@ th,td{
     border: 1px solid gray;
 }
 .res-td{
-    padding: 10px;
+    padding: 10px 0 10px 0;
 }
 .res-th{
-    padding: 10px 5px 10px 5px;
+    padding: 10px 0 10px 0;
 }
 #result-diagram-row{
     border: 1px solid gray;
