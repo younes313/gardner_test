@@ -41,7 +41,6 @@ def result(type, id):
 	age = r.json()['age']
 	exam_id = id
 
-
 	ans = res.split(',')
 	dic = { 
 			"Linguistic":           ans[0],
@@ -59,8 +58,6 @@ def result(type, id):
 		}
 
 	return render_template('final_result.html', dic=dic)
-
-
 
 
 
