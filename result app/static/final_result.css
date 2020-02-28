@@ -1,0 +1,105 @@
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src:url("fonts/ttf/IRANSansWeb.ttf") format('truetype');
+}
+body{
+    font-family: IRANSans, sans-serif;
+    background-color: #fafafa;
+}
+#student-information{
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 10px 20px 10px 10px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+.info-text-props{
+    display: inline-block;
+    width: 120px;
+}
+.std-info-row{
+    line-height: 1.8rem;
+}
+#result-table-row{
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+#result-table{
+    display: block;
+    margin: auto;
+}
+table{
+    margin: auto;
+    text-align: center;
+}
+td{
+    width: 11.25%
+}
+th,td{
+    border: 1px solid gray;
+}
+.res-td{
+    padding: 10px;
+}
+.res-th{
+    padding: 10px 5px 10px 5px;
+}
+#result-diagram-row{
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 20px 20px 20px 20px;
+    background-color: white;
+}
+#result-diagram{
+    display: block;
+    margin: auto;
+}
+#myChart{
+    border:1px solid lightgray;
+    border-radius: 15px;
+    padding: 10px;
+    width: 50vw;
+}
+#consultant-opinion-row{
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+#print-btn{
+    width: 150px;
+    background-color: aqua;
+    border: 1px solid aqua;
+    border-radius: 20px;
+    padding: 5px 0 5px 0;
+    margin: 10px;
+}
+#print-btn:focus{
+    background-color: #01dcdc;
+    outline: none;
+}
+#print-btn:hover {
+    border: 1px solid blue;
+}
+#home-btn{
+    background-color: aqua;
+    border: 1px solid aqua;
+    border-radius: 20px;
+    padding: 5px;
+    float: left;
+    margin: 10px;
+}
+#home-btn:focus{
+    background-color: #01dcdc;
+    outline: none;
+}
+#home-btn:hover{
+    border: 1px solid blue;
+}

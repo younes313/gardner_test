@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/final_result.css">
+</head>
+
+<body>
+<div class="container" dir="rtl" style="text-align: right;margin-top: 50px;margin-bottom: 50px;">
+    <h2 style="text-align: center;">کارنامه</h2>
+    <div class="row" id="student-information">
+        <div >
+            <div id="std-name" class="std-info-row">
+                <span class="info-text-props">نام دانش آموز:</span>
+                <!--------------------------- This span tag is filled with student name --------------------------->
+                <span>امیر دودو باقالی</span>
+                <!-------------------------------------------------------------------------------------------------->
+            </div>
+            <div id="std-age" class="std-info-row">
+                <span class="info-text-props">سن دانش آموز:</span>
+                <!--------------------------- This span tag is filled with student age --------------------------->
+                <span>2 ساله از اصفهان</span>
+                <!-------------------------------------------------------------------------------------------------->
+            </div>
+            <div id="exam-id" class="std-info-row">
+                <span class="info-text-props">شناسه آزمون:</span>
+                <!--------------------------- This span tag is filled with exam id --------------------------->
+                <span>999999</span>
+                <!-------------------------------------------------------------------------------------------------->
+            </div>
+        </div>
+    </div>
+    <div class="row" id="result-table-row">
+        <div id="result-table">
+            <table>
+                <caption style="caption-side: top;text-align: center;">نتیجه آزمون</caption>
+                <thead>
+                <tr>
+                    <th class="res-th">نوع هوش</th>
+                    <th class="res-th">هوش کلامی/زبانی</th>
+                    <th class="res-th">هوش منطقی ریاضی</th>
+                    <th class="res-th">هوش فضایی</th>
+                    <th class="res-th">هوش بدنی/جنبشی</th>
+                    <th class="res-th">هوش درون فردی</th>
+                    <th class="res-th">هوش برون فردی</th>
+                    <th class="res-th">هوش موسیقایی</th>
+                    <th class="res-th">هوش طبیعت گرا</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th>نمره از 50</th>
+                    <!-------------------------- here is filled by grades ------------------------>
+                    <td class="res-td">45</td><!--کلامی/زبانی-->
+                    <td class="res-td">43</td><!--منطقی ریاضی-->
+                    <td class="res-td">46</td><!--فضایی-->
+                    <td class="res-td">50</td><!--بدنی/جنبشی-->
+                    <td class="res-td">49</td><!--درون فردی-->
+                    <td class="res-td">40</td><!--برون فردی-->
+                    <td class="res-td">39</td><!--موسیقایی-->
+                    <td class="res-td">48</td><!--طبیعت گرا-->
+                    <!----------------------------------------------------------------------------->
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row" id="result-diagram-row">
+        <div id="result-diagram">
+            <canvas id="myChart" ></canvas>
+        </div>
+    </div>
+        <div class="row" id="consultant-opinion-row">
+        <div id="consultant-opinion">
+            <h3>نظر مشاور</h3>
+            <!--------------------here is filled with consultant opinion --------------------------->
+            <p>
+                خب به نظر من شما با این نمراتت هیچ پخی نمیشی.
+                درس خوندنو بوکون تو اونجات و ترک تحصیل کن و برو دنبال پول درآوردن.
+                اینو برادرانه میگم اگه از الان بری تو بازار به نفعته بد بخت.
+                الان یکیو میشناسم همسن منه تو کار دلاره و یه موتور سی تومنی داره!!!
+                آره دیگه خلاصه بکش بیرون فرو کن یه جا دیگه.
+            </p>
+            <!-------------------------------------------------------------------------------------->
+        </div>
+    </div>
+    <button type="button" onclick="printPage()" id="print-btn">چاپ کارنامه</button>
+    <button type="button" id="home-btn">بازگشت به صفحه اصلی</button>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script>
+    function printPage() {
+        window.print();
+    }
+</script>
+<script>
+    let ctx = document.getElementById('myChart').getContext('2d');
+    let myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['هوش طبیعت گرا', 'هوش موسیقایی', 'هوش برون فردی', 'هوش درون فردی', 'هوش بدنی/جنبشی', 'هوش فضایی',
+                'هوش منطقی ریاضی','هوش کلامی/زبانی'],
+            datasets: [{
+                //---------------------data set of grades------------------------------
+                //first index: هوش طبیعت گرا
+                //last index: هوش کلامی/زبانی
+                data: [48, 39, 40, 49, 50, 46, 43, 45],
+                //---------------------------------------------------------------------
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(45, 226, 64, 0.2)',
+                    'rgba(168,214,0,0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(45, 226, 64, 1)',
+                    'rgba(168, 214, 0, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "نمودار نمرات",
+
+            },
+            legend: {
+                display: false,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMax: 50,
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+</script>
+</body>
+</html>
