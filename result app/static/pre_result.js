@@ -35,7 +35,7 @@ view_report.addEventListener("click", () => {
    }
    else{
        //show report
-       location.href = "exam/result/" + report_type + "/" + exam_id.value;
+       location.href = "result/" + report_type + "/" + exam_id.value + "/" +  id2;
    }
 //    console.log(exam_id.value);
 });
