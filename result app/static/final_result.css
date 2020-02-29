@@ -6,7 +6,7 @@
 }
 body{
     font-family: IRANSans, sans-serif;
-    background-color: #fafafa;
+    background-color: rgba(229, 137, 250, 0.57);
 }
 #student-information{
     border: 1px solid gray;
@@ -14,6 +14,11 @@ body{
     padding: 10px 20px 10px 10px;
     margin-bottom: 20px;
     background-color: white;
+}
+#schoolChild{
+    background-image: url("schoolChild.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .info-text-props{
     display: inline-block;
@@ -103,4 +108,12 @@ th,td{
 }
 #home-btn:hover{
     border: 1px solid blue;
+}
+#children{
+    display: block;
+    height: 250px;
+    background-image: url("children2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
 }
