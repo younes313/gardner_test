@@ -12,13 +12,14 @@ body{
     border: 1px solid gray;
     border-radius: 15px;
     padding: 10px 20px 10px 10px;
-    margin-bottom: 20px;
+    margin: 0 2px 20px 2px;
     background-color: white;
 }
 #schoolChild{
     background-image: url("schoolChild.png");
     background-repeat: no-repeat;
     background-size: contain;
+    height: 100px;
 }
 .info-text-props{
     display: inline-block;
@@ -30,13 +31,15 @@ body{
 #result-table-row{
     border: 1px solid gray;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin: 0 2px 20px 2px;
     padding-bottom: 20px;
     background-color: white;
 }
 #result-table{
     display: block;
     margin: auto;
+    overflow-x: auto;
+    padding: 0 10px;
 }
 table{
     width: 95%;
@@ -48,6 +51,7 @@ td{
 }
 th,td{
     border: 1px solid gray;
+    font-size: 0.9em;
 }
 .res-td{
     padding: 10px 0 10px 0;
@@ -58,25 +62,43 @@ th,td{
 #result-diagram-row{
     border: 1px solid gray;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin: 0 2px 20px 2px;
     padding: 20px 20px 20px 20px;
     background-color: white;
 }
 #result-diagram{
     display: block;
+    position: relative;
     margin: auto;
+}
+@media only screen and (max-width: 575px){
+    #result-diagram{
+        width: 90vw;
+        height: 300px;
+    }
+    #schoolChild{
+        background-position: center;
+    }
+    th{
+        font-size: 0.8em;
+    }
+    table{
+        display: table-cell;
+        min-width: 180vw;
+    }
 }
 #myChart{
     border:1px solid lightgray;
     border-radius: 15px;
     padding: 10px;
     width: 50vw;
+    height: 500px;
 }
 #consultant-opinion-row{
     border: 1px solid gray;
     border-radius: 15px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin: 0 2px 20px 2px;
     background-color: white;
 }
 #print-btn{

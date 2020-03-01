@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc7be303-0843-4b36-bdb8-b70caf2fecea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/exam app/static/fonts/ttf/IRANSansWeb.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result app/static/children2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam app/static/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/exam app/static/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam app/static/myStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/exam app/static/myStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result app/static/final_result.css" beforeDir="false" afterPath="$PROJECT_DIR$/result app/static/final_result.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result app/static/pre_result.css" beforeDir="false" afterPath="$PROJECT_DIR$/result app/static/pre_result.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result app/templates/final_result.html" beforeDir="false" afterPath="$PROJECT_DIR$/result app/templates/final_result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result app/templates/pre_result.html" beforeDir="false" afterPath="$PROJECT_DIR$/result app/templates/pre_result.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,51 +20,41 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exam app/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/result app/static/final_result.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
-              <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#0;n#div#0;n#form#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exam app/static/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="302" column="51" selection-start-line="302" selection-start-column="51" selection-end-line="302" selection-end-column="51" />
-              <folding>
-                <element signature="e#674#6604#0" />
-                <element signature="n#!!block;n#getHeadings#0" />
-                <element signature="n#!!block;n#convert#0" />
-                <element signature="n#!!block;n#show_q_text#0" />
-                <element signature="n#!!block;n#show_options#0" />
-                <element signature="n#!!block;n#add_new_events#0" />
-                <element signature="n#!!block;n#show_result#0" />
-              </folding>
+            <state relative-caret-position="216">
+              <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-end-line="73" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/result app/static/final_result.css">
+        <entry file="file://$PROJECT_DIR$/result app/static/pre_result.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="111" column="9" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="9" />
+            <state relative-caret-position="-1521">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/exam app/static/myStyle.css">
+        <entry file="file://$PROJECT_DIR$/result app/templates/pre_result.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="120">
+              <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/result app/templates/final_result.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#caption#0;n#table#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,6 +65,7 @@
     <findStrings>
       <find>border:</find>
       <find>children</find>
+      <find>school</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -86,10 +77,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/result app/templates/final_result.html" />
-        <option value="$PROJECT_DIR$/result app/static/final_result.css" />
         <option value="$PROJECT_DIR$/exam app/static/myStyle.css" />
         <option value="$PROJECT_DIR$/exam app/static/app.js" />
+        <option value="$PROJECT_DIR$/result app/templates/final_result.html" />
+        <option value="$PROJECT_DIR$/result app/static/final_result.css" />
+        <option value="$PROJECT_DIR$/result app/templates/pre_result.html" />
+        <option value="$PROJECT_DIR$/result app/static/pre_result.css" />
       </list>
     </option>
   </component>
@@ -188,7 +181,7 @@
       <workItem from="1582983873776" duration="3961000" />
       <workItem from="1582989616331" duration="4237000" />
       <workItem from="1583003401560" duration="4105000" />
-      <workItem from="1583042084613" duration="245000" />
+      <workItem from="1583042084613" duration="10394000" />
     </task>
     <task id="LOCAL-00001" summary="final result updated">
       <created>1582995669516</created>
@@ -197,14 +190,22 @@
       <option name="project" value="LOCAL" />
       <updated>1582995669516</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="final result updated">
+      <created>1583042490917</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583042490917</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8587000" />
+    <option name="totallyTimeSpent" value="18736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17250496" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -239,37 +240,8 @@
     <state x="449" y="187" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1582987314258" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/result app/templates/final_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-          <folding>
-            <element signature="n#style#0;n#h3#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/exam app/static/f1.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exam app/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#form#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exam app/static/myStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exam app/static/app.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -287,10 +259,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/exam app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#form#0;n#main#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exam app/static/myStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result app/templates/final_result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#caption#0;n#table#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result app/static/flower-3214833_1280.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result app/templates/pre_result.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="72" selection-start-line="5" selection-start-column="72" selection-end-line="5" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/result app/static/final_result.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="111" column="9" selection-start-line="111" selection-start-column="1" selection-end-line="111" selection-end-column="9" />
+        <state relative-caret-position="216">
+          <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-end-line="73" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result app/static/pre_result.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1521">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
         </state>
       </provider>
     </entry>
