@@ -218,7 +218,7 @@ function show_q_text () {
   let q_text = document.getElementsByClassName("q-text");
   for(let i = 0 ; i < 10 ; i++){
     let current_q_text = headings.next().value;
-    if (current_q_text == "80- در تعطیلات خود ترجیح می دهم به مکان های طبیعی مانند پارک یا جنگل بروم تا به یک هتل مجلّل و پر رفت و آمد.")
+    if (current_q_text === "80- در تعطیلات خود ترجیح می دهم به مکان های طبیعی مانند پارک یا جنگل بروم تا به یک هتل مجلّل و پر رفت و آمد.")
     {
       document.getElementById("nextQ-btn").innerHTML = "مشاهده نتایج";
     }
@@ -277,8 +277,8 @@ function clickOnNextPage () {
         }
       }
     }
-    if (t==0) {
-      if(document.getElementById("nextQ-btn").innerHTML == "مشاهده نتایج")
+    if (t === 0) {
+      if(document.getElementById("nextQ-btn").innerHTML === "مشاهده نتایج")
       {
         let answers_string = "";
         for(let i=0;i<80;i++)
@@ -299,6 +299,8 @@ function clickOnNextPage () {
         current_circle++;
         window.scrollTo(0, 0); 
       }
+      document.body.style.backgroundImage = "url('../../f1.png')";
+      document.body.style.backgroundColor = "gray";
     } else
       window.alert("لطفا به همه موارد پاسخ دهید.");
   });
