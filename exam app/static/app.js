@@ -12,6 +12,7 @@ let progress = document.getElementById("progress_id");
 let width =0;
 
 /*----------------------My Code -----------------------*/
+document.body.style.backgroundImage = "url('../static/images/f1.png')";
 let nextQ_btn = document.getElementById("nextQ-btn");
 let question_id = [
 "1- به کتاب و کتابخوانی علاقه دارم.",
@@ -262,6 +263,7 @@ function show_options () {
 show_options();
 
 let current_circle = 1;
+let bc = 2;//index for background image
 function clickOnNextPage () {
   document.getElementById("nextQ-btn").addEventListener("click", (event) => {
     event.preventDefault();
@@ -299,8 +301,18 @@ function clickOnNextPage () {
         current_circle++;
         window.scrollTo(0, 0); 
       }
-      document.body.style.backgroundImage = "url('../../f1.png')";
-      document.body.style.backgroundColor = "gray";
+      if(bc === 5 || bc === 6 || bc === 7)
+      {
+        document.body.style.backgroundImage = "url('../static/images/f" + bc + ".jpg')";
+      }
+      else if(bc === 9){
+        document.body.style.backgroundColor = "White";
+      }
+      else{
+        document.body.style.backgroundImage = "url('../static/images/f" + bc + ".png')";
+      }
+
+      bc++;
     } else
       window.alert("لطفا به همه موارد پاسخ دهید.");
   });
