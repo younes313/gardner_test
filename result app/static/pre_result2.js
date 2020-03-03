@@ -25,6 +25,7 @@ else if(report_type === "wexler"){
 }
 
 let view_report = document.getElementById("view-report-btn");
+let comment = document.getElementById("consultant-text");
 view_report.addEventListener("click", () => {
    if(report_type === undefined){
         window.alert("لطفا یک کارنامه را انتخاب کنید.");
@@ -35,7 +36,7 @@ view_report.addEventListener("click", () => {
    }
    else{
        //show report
-       location.href = "result/" + report_type + "/" + exam_id.value + "/" +  id2;
+       location.href = "result/" + report_type + "/" + exam_id.value + "/" +  id2 + "?comment="+ comment.value ;
    }
 //    console.log(exam_id.value);
 });
