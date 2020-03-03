@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>صفحه ورود و نظر مشاور</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/pre_result.css">
+</head>
+<body>
+<div class="container" dir="rtl" style="margin-top: 50px">
+    <div id="main">
+        <div id="user-icon">
+            <img src="../static/man.svg" alt="here boy!" id="user-icon-img">
+        </div>
+        <div id="student-id">
+            <div style="margin: 10px 0">لطفا شناسه آزمون را وارد نمائید:</div>
+            <label for="std-id-input"></label>
+            <input type="text" id="std-id-input" placeholder="شناسه آزمون">
+        </div>
+        <div id="consultant">
+            <label for="consultant-text">نظر مشاور:</label>
+            <textarea id="consultant-text" name="consultant-text" rows="6"></textarea>
+        </div>
+        <div id="type-of-report">
+            <div>لطفا کارنامه مورد نظر خود را انتخاب کنید:</div>
+            <div id="type-of-report-btn">
+                <button type="button" class="report-btn" id="gardner">گاردنر</button>
+                <button type="button" class="report-btn" id="wexler">وکسلر</button>
+            </div>
+        </div>
+        <div id="view-report">
+            <button id="view-report-btn" type="button">مشاهده کارنامه</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script>
+    var id2 = {{dic.id2}};
+</script>
+
+<script src="../static/pre_result.js"></script>
+</body>
+</html>
