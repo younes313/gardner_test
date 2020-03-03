@@ -54,6 +54,7 @@ def result(type, id, id2):
         "name": name,
         "age": age,
         "exam_id": exam_id,
+        "id2": str(id2),
     }
 
     return render_template('final_result.html', dic=dic)
@@ -61,7 +62,7 @@ def result(type, id, id2):
 
 # just for test the request correctness
 @app.route('/test/<string:type>/<int:id>/<int:id2>', methods=['GET', 'POST'])
-def get_and_return(type, id,id2):
+def get_and_return(type, id, id2):
     dic = {
         'result': "10,20,30,40,50,30,10,40",
         'comment': 'بدک نیست',
